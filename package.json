@@ -1,0 +1,53 @@
+{
+  "name": "chatbot_challenge",
+  "version": "1.0.0",
+  "description": "Chatbot to communicate with rival's chatbot",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon --exec babel-node src/index.js",
+    "build": "babel src --out-dir dist",
+    "serve": "node dist/index.js",
+    "unit-tests": "mocha ./test/unit/**/*.spec.js -r @babel/register",
+    "integration-tests": "mocha ./test/integration/**/*.spec.js -r @babel/register",
+    "test": "mocha ./test/**/*.spec.js -r @babel/register",
+    "mocha": "mocha -r @babel/register",
+    "seed": "./node_modules/mongoose-data-seed/md-seed.js run"
+  },
+  "keywords": [
+    "chatbot",
+    "rivaltech",
+    "rival",
+    "rival_technologies"
+  ],
+  "author": "Heberth Braga",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/register": "^7.9.0",
+    "@babel/runtime": "^7.9.2",
+    "app-root-path": "^3.0.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "flat-cache": "^2.0.1",
+    "mongoose": "^5.9.5",
+    "mongoose-data-seed": "^2.1.6",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.1.1",
+    "sinon": "^9.0.1"
+  },
+  "mdSeed": {
+    "seedersFolder": "./seeders"
+  }
+}
